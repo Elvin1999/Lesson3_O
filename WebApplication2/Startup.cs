@@ -28,7 +28,7 @@ namespace WebApplication2
         {
             services.AddControllersWithViews();
             services.AddTransient<ICalculator, Calculator>();
-            var conn = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StudentDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var conn = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SchoolDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<SchoolDbContext>(opt =>
             {
                 opt.UseSqlServer(conn);

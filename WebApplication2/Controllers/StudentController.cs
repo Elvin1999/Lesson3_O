@@ -15,10 +15,19 @@ namespace WebApplication2.Controllers
             _context = context;
         }
 
-        public JsonResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            var data = _context.Students.ToList();
-            return Json(data);
+            return Json(await _context.Students.ToListAsync());
         }
+        //public JsonResult Index()
+        //{
+        //    var data = _context.Students.ToList();
+        //    return Json(data);
+        //}
+
+
+
+
     }
 }
